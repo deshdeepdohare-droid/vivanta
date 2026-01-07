@@ -1,0 +1,2810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vivanta Township | Luxury Living in Banswara</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary: #1a5276;
+            --primary-light: #2c7da0;
+            --secondary: #d4af37;
+            --secondary-light: #e4c45c;
+            --dark: #0a3d62;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --gray-light: #e9ecef;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.15);
+            --border-radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--gray);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-light);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            box-shadow: 0 4px 15px rgba(26, 82, 118, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-light);
+            box-shadow: 0 10px 25px rgba(26, 82, 118, 0.3);
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .logo-text span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .nav-links a.active:after {
+            width: 100%;
+        }
+
+        .login-btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 30px;
+            margin-left: 30px;
+        }
+
+        .login-btn:hover {
+            background-color: var(--primary-light);
+            color: white;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: var(--dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(10, 61, 98, 0.85), rgba(10, 61, 98, 0.9)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero h1 span {
+            color: var(--secondary);
+        }
+
+        .hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .hero .btn {
+            padding: 16px 40px;
+            font-size: 1.1rem;
+        }
+
+        .floating-house {
+            position: absolute;
+            bottom: -100px;
+            right: 5%;
+            width: 500px;
+            height: 500px;
+            background: url('') no-repeat center;
+            background-size: contain;
+            opacity: 0.7;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .feature-icon {
+            background-color: rgba(212, 175, 55, 0.15);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .feature h4 {
+            margin-bottom: 5px;
+            font-size: 1.3rem;
+        }
+
+        .about-images {
+            position: relative;
+            height: 500px;
+        }
+
+        .about-img-main {
+            width: 100%;
+            height: 400px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+        }
+
+        .about-img-secondary {
+            width: 0%;
+            height: 300px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .about-img-main img,
+        .about-img-secondary img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .about-img-main:hover img,
+        .about-img-secondary:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Developer Info Section */
+        .developer-info {
+            background-color: white;
+            padding: 80px 0;
+        }
+
+        .developer-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .developer-text h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .developer-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 25px 15px;
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        .developer-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            height: 500px;
+        }
+
+        .developer-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .developer-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Properties Section */
+        .properties {
+            background-color: var(--light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            display: inline-block;
+        }
+
+        .section-header h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .property-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .property-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .property-img {
+            height: 250px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .property-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .property-card:hover .property-img img {
+            transform: scale(1.1);
+        }
+
+        .property-content {
+            padding: 25px;
+        }
+
+        .property-type {
+            display: inline-block;
+            background-color: rgba(212, 175, 55, 0.1);
+            color: var(--secondary);
+            padding: 6px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .property-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            transition: var(--transition);
+        }
+
+        .property-card:hover .property-title {
+            color: var(--primary);
+        }
+
+        .property-features {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 20px 0;
+            border-top: 1px solid var(--gray-light);
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-item i {
+            color: var(--secondary);
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-item span {
+            display: block;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .property-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .property-price span {
+            font-size: 1rem;
+            color: var(--gray);
+            font-weight: 400;
+        }
+
+        /* Amenities Section */
+        .amenities {
+            background-color: white;
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .amenity-card {
+            background-color: var(--light);
+            padding: 35px 25px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .amenity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .amenity-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: var(--secondary);
+        }
+
+        .amenity-icon {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(26, 82, 118, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--primary);
+            font-size: 2rem;
+            transition: var(--transition);
+        }
+
+        .amenity-card:hover .amenity-icon {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* Master Plan Section */
+        .master-plan {
+            background-color: var(--light);
+            padding: 100px 0;
+        }
+
+        .plan-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .plan-text h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .plan-features {
+            margin-top: 30px;
+        }
+
+        .plan-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .plan-feature i {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(212, 175, 55, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            font-size: 1.3rem;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .plan-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            height: 500px;
+            position: relative;
+        }
+
+        .plan-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .plan-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 70%, rgba(10, 61, 98, 0.9));
+            display: flex;
+            align-items: flex-end;
+            padding: 30px;
+            color: white;
+        }
+
+        .plan-overlay h3 {
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        /* Location Section */
+        .location {
+            background-color: white;
+        }
+
+        .location-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .location-text {
+            padding-right: 20px;
+        }
+
+        .location-details {
+            margin-top: 30px;
+        }
+
+        .location-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .location-detail i {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(212, 175, 55, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            font-size: 1.3rem;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .location-map {
+            height: 450px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(26, 82, 118, 0.1), rgba(26, 82, 118, 0.2)), url('https://images.unsplash.com/photo-1578855697109-68e6c4f4b9eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            background-color: var(--light);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 250px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(10, 61, 98, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-item-overlay {
+            opacity: 1;
+        }
+
+        .gallery-item-overlay i {
+            color: white;
+            font-size: 2.5rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: white;
+            padding: 100px 0;
+        }
+
+        .testimonial-slider {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial-card {
+            background-color: var(--light);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .testimonial-card:before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--secondary);
+            opacity: 0.2;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 25px;
+            color: var(--dark);
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .author-info p {
+            margin-bottom: 0;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Timeline Section */
+        .timeline {
+            background-color: var(--light);
+            padding: 100px 0;
+        }
+
+        .timeline-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: var(--secondary);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            justify-content: flex-start;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-end;
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 30px;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: -10px;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            transform: rotate(45deg);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: -10px;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            transform: rotate(45deg);
+        }
+
+        .timeline-year {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background-color: var(--secondary);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px var(--secondary);
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info {
+            padding-right: 20px;
+        }
+
+        .contact-details {
+            margin-top: 30px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .contact-detail i {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(212, 175, 55, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            font-size: 1.3rem;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .contact-form {
+            background-color: var(--light);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--border-radius);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .footer-logo span {
+            color: var(--secondary);
+        }
+
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-links h3,
+        .footer-contact h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h3:after,
+        .footer-contact h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-contact i {
+            color: var(--secondary);
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Login Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .login-modal {
+            background-color: white;
+            width: 100%;
+            max-width: 450px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(30px);
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active .login-modal {
+            transform: translateY(0);
+        }
+
+        .modal-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .modal-header h2 {
+            color: white;
+            margin-bottom: 0;
+        }
+
+        .modal-header h2:after {
+            display: none;
+        }
+
+        .modal-body {
+            padding: 40px;
+        }
+
+        .modal-form .form-group {
+            margin-bottom: 25px;
+        }
+
+        .modal-footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--gray-light);
+        }
+
+        .modal-footer p {
+            margin-bottom: 0;
+        }
+
+        .modal-footer a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .modal-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--secondary);
+            transform: rotate(90deg);
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.4rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .about-content,
+            .developer-content,
+            .plan-content,
+            .location-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .about-img-main,
+            .about-img-secondary {
+                position: relative;
+                width: 100%;
+                height: 300px;
+            }
+            
+            .about-img-main {
+                margin-bottom: 30px;
+            }
+            
+            .floating-house {
+                display: none;
+            }
+            
+            .developer-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .timeline-container:before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                justify-content: flex-start !important;
+                padding-left: 60px;
+            }
+            
+            .timeline-content {
+                width: 100%;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content:before,
+            .timeline-item:nth-child(even) .timeline-content:before {
+                left: -10px;
+                right: auto;
+            }
+            
+            .timeline-marker {
+                left: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 0;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 30px 0;
+                box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .login-btn {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .properties-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .developer-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .amenities-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+
+        /* Scroll to top button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(26, 82, 118, 0.3);
+        }
+
+        .scroll-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-5px);
+        }
+
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+
+        .preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader {
+            width: 80px;
+            height: 80px;
+            border: 5px solid rgba(212, 175, 55, 0.3);
+            border-top-color: var(--secondary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i class="fas fa-building logo-icon"></i>
+                    <div class="logo-text">Vivanta <span>Township</span></div>
+                </a>
+                
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#developer">Developer</a></li>
+                    <li><a href="#properties">Properties</a></li>
+                    <li><a href="#amenities">Amenities</a></li>
+                    <li><a href="#plan">Master Plan</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#timeline">Timeline</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" class="btn login-btn" id="openLogin">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="animate__animated animate__fadeInDown">Luxury Living at <span>Vivanta Township</span></h1>
+                <p class="animate__animated animate__fadeInUp">Experience unparalleled luxury and modern living at Vivanta Township, located on Ojhariya Bypass Road in Banswara, Rajasthan. Discover your dream home in our exclusive community featuring 3BHK luxury houses, farmhouses, penthouses, and more.</p>
+                <div class="hero-btns animate__animated animate__fadeInUp">
+                    <a href="#properties" class="btn">Explore Properties</a>
+                    <a href="#contact" class="btn btn-primary">Schedule a Visit</a>
+                </div>
+            </div>
+        </div>
+        <div class="floating-house"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Vivanta Township</h2>
+                    <p>Vivanta Township is a premium residential development in Banswara, Rajasthan, offering luxurious living spaces designed for modern families. Our township is strategically located on Ojhariya Bypass Road, providing easy connectivity to all major city areas while maintaining a serene environment.</p>
+                    <p>With a focus on sustainability, community, and luxury, Vvanta Township brings together the best of contemporary architecture and traditional values. Our development spans over 25 acres of lush greenery, offering a perfect blend of natural beauty and modern amenities.</p>
+                    <p>The township features a thoughtfully planned layout with wide roads, green belts, dedicated play areas, and state-of-the-art infrastructure. Each residential unit is designed with meticulous attention to detail, ensuring optimal ventilation, natural light, and privacy.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div>
+                                <h4>Luxury Residences</h4>
+                                <p>Spacious 3BHK homes with premium finishes</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-tree"></i>
+                            </div>
+                            <div>
+                                <h4>Green Spaces</h4>
+                                <p>Over 70% of area dedicated to greenery</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Security</h4>
+                                <p>24/7 security with CCTV surveillance</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-swimming-pool"></i>
+                            </div>
+                            <div>
+                                <h4>Amenities</h4>
+                                <p>World-class recreational facilities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-images">
+                    <div class="about-img-main">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" alt="Vivanta Township Main Building">
+                    </div>
+                    <div class="about-img-secondary">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Vivanta Township Garden Area">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Info Section -->
+    <section class="developer-info" id="developer">
+        <div class="container">
+            <div class="developer-content">
+                <div class="developer-image">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80" alt="Vivanta Developers">
+                </div>
+                
+                <div class="developer-text">
+                    <h2>About Vivanta Developers</h2>
+                    <p>Vivanta Developers is a renowned real estate development company with over 25 years of experience in creating premium residential and commercial properties across Rajasthan. Our commitment to quality, innovation, and customer satisfaction has made us a trusted name in the industry.</p>
+                    <p>We specialize in creating sustainable communities that enhance the quality of life for our residents. Our team of architects, engineers, and designers work together to create spaces that are not just beautiful but also functional and environmentally responsible.</p>
+                    <p>At Vivanta Township, we have applied our decades of expertise to create a residential paradise that sets new standards for luxury living in Banswara. Every aspect of the township has been carefully planned and executed to ensure the highest quality standards.</p>
+                    
+                    <div class="developer-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">25+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5000+</div>
+                            <div class="stat-label">Happy Families</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section class="properties" id="properties">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Properties</h2>
+                <p>Explore our exclusive range of luxury residences designed for modern living</p>
+            </div>
+            
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-img">
+                        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="3BHK Luxury Villa">
+                    </div>
+                    <div class="property-content">
+                        <span class="property-type">Luxury Villa</span>
+                        <h3 class="property-title">3BHK Luxury Villa</h3>
+                        <p>Spacious 3-bedroom villa with modern amenities, premium finishes, and private garden area. Perfect for families seeking comfort and luxury.</p>
+                        
+                        <div class="property-features">
+                            <div class="feature-item">
+                                <i class="fas fa-bed"></i>
+                                <span>3 Beds</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-bath"></i>
+                                <span>3 Baths</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>2200 sq.ft.</span>
+                            </div>
+                        </div>
+                        
+                        <div class="property-price">₹ 85 Lakhs <span>Starting Price</span></div>
+                        <a href="#contact" class="btn" style="width: 100%; margin-top: 20px;">Enquire Now</a>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-img">
+                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80" alt="Farmhouse">
+                    </div>
+                    <div class="property-content">
+                        <span class="property-type">Farmhouse</span>
+                        <h3 class="property-title">Premium Farmhouse</h3>
+                        <p>Exclusive farmhouse with private farmland, modern amenities, and serene surroundings. Experience country living with urban convenience.</p>
+                        
+                        <div class="property-features">
+                            <div class="feature-item">
+                                <i class="fas fa-bed"></i>
+                                <span>4 Beds</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-bath"></i>
+                                <span>3 Baths</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>1.5 Acre</span>
+                            </div>
+                        </div>
+                        
+                        <div class="property-price">₹ 1.2 Cr <span>Starting Price</span></div>
+                        <a href="#contact" class="btn" style="width: 100%; margin-top: 20px;">Enquire Now</a>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-img">
+                        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Penthouse">
+                    </div>
+                    <div class="property-content">
+                        <span class="property-type">Penthouse</span>
+                        <h3 class="property-title">Luxury Penthouse</h3>
+                        <p>Stunning penthouse with panoramic views, premium amenities, and exclusive rooftop access. The ultimate luxury living experience.</p>
+                        
+                        <div class="property-features">
+                            <div class="feature-item">
+                                <i class="fas fa-bed"></i>
+                                <span>4 Beds</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-bath"></i>
+                                <span>4 Baths</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>3200 sq.ft.</span>
+                            </div>
+                        </div>
+                        
+                        <div class="property-price">₹ 2.5 Cr <span>Starting Price</span></div>
+                        <a href="#contact" class="btn" style="width: 100%; margin-top: 20px;">Enquire Now</a>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-img">
+                        <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=2068&q=80" alt="2BHK Apartment">
+                    </div>
+                    <div class="property-content">
+                        <span class="property-type">Apartment</span>
+                        <h3 class="property-title">2BHK Premium Apartment</h3>
+                        <p>Modern 2-bedroom apartment with smart home features, modular kitchen, and balcony with garden view. Ideal for young professionals.</p>
+                        
+                        <div class="property-features">
+                            <div class="feature-item">
+                                <i class="fas fa-bed"></i>
+                                <span>2 Beds</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-bath"></i>
+                                <span>2 Baths</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>1250 sq.ft.</span>
+                            </div>
+                        </div>
+                        
+                        <div class="property-price">₹ 45 Lakhs <span>Starting Price</span></div>
+                        <a href="#contact" class="btn" style="width: 100%; margin-top: 20px;">Enquire Now</a>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-img">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2075&q=80" alt="Duplex Villa">
+                    </div>
+                    <div class="property-content">
+                        <span class="property-type">Duplex Villa</span>
+                        <h3 class="property-title">4BHK Duplex Villa</h3>
+                        <p>Elegant duplex villa with private lawn, servant quarter, and premium finishes. Perfect for large families seeking luxury and space.</p>
+                        
+                        <div class="property-features">
+                            <div class="feature-item">
+                                <i class="fas fa-bed"></i>
+                                <span>4 Beds</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-bath"></i>
+                                <span>4 Baths</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>2800 sq.ft.</span>
+                            </div>
+                        </div>
+                        
+                        <div class="property-price">₹ 1.5 Cr <span>Starting Price</span></div>
+                        <a href="#contact" class="btn" style="width: 100%; margin-top: 20px;">Enquire Now</a>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-img">
+                        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Studio Apartment">
+                    </div>
+                    <div class="property-content">
+                        <span class="property-type">Studio</span>
+                        <h3 class="property-title">Luxury Studio Apartment</h3>
+                        <p>Compact yet luxurious studio apartment with smart storage solutions, modern amenities, and balcony. Perfect for singles or couples.</p>
+                        
+                        <div class="property-features">
+                            <div class="feature-item">
+                                <i class="fas fa-bed"></i>
+                                <span>1 Bed</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-bath"></i>
+                                <span>1 Bath</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>650 sq.ft.</span>
+                            </div>
+                        </div>
+                        
+                        <div class="property-price">₹ 28 Lakhs <span>Starting Price</span></div>
+                        <a href="#contact" class="btn" style="width: 100%; margin-top: 20px;">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="amenities" id="amenities">
+        <div class="container">
+            <div class="section-header">
+                <h2>World-Class Amenities</h2>
+                <p>Experience premium amenities designed for your comfort and convenience</p>
+            </div>
+            
+            <div class="amenities-grid">
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-swimming-pool"></i>
+                    </div>
+                    <h3>Swimming Pool</h3>
+                    <p>Olympic-sized swimming pool with separate kids' pool and professional lifeguards.</p>
+                </div>
+                
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Fitness Center</h3>
+                    <p>Fully-equipped gym with modern equipment, yoga studio, and personal trainers.</p>
+                </div>
+                
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Green Parks</h3>
+                    <p>Lush green parks, walking trails, and children's play areas throughout the township.</p>
+                </div>
+                
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>24/7 Security</h3>
+                    <p>Round-the-clock security with CCTV surveillance and gated entry for complete safety.</p>
+                </div>
+                
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-basketball-ball"></i>
+                    </div>
+                    <h3>Sports Facilities</h3>
+                    <p>Tennis courts, basketball court, badminton courts, and indoor games room.</p>
+                </div>
+                
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Community Club</h3>
+                    <p>Exclusive clubhouse with banquet hall, party areas, and fine dining restaurant.</p>
+                </div>
+                
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Parking Facility</h3>
+                    <p>Ample covered parking space for residents and visitors with EV charging stations.</p>
+                </div>
+                
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Shopping Complex</h3>
+                    <p>In-house shopping complex with supermarkets, pharmacies, and convenience stores.</p>
+                </div>
+                
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Health Care</h3>
+                    <p>24/7 medical center with emergency services and pharmacy within the township.</p>
+                </div>
+                
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>High-Speed Internet</h3>
+                    <p>Fiber optic internet connectivity throughout the township for seamless connectivity.</p>
+                </div>
+                
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <h3>Sustainable Energy</h3>
+                    <p>Solar panels for common areas, rainwater harvesting, and waste management systems.</p>
+                </div>
+                
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h3>Transportation</h3>
+                    <p>Shuttle service to city center, schools, and shopping districts for residents.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Plan Section -->
+    <section class="master-plan" id="plan">
+        <div class="container">
+            <div class="plan-content">
+                <div class="plan-text">
+                    <h2>Master Plan</h2>
+                    <p>Vivanta Township has been meticulously planned to create a harmonious balance between built spaces and natural environment. Our master plan focuses on creating a sustainable community that promotes healthy living and social interaction.</p>
+                    <p>The township is divided into distinct zones - residential, recreational, commercial, and green zones - each designed to serve specific needs while maintaining overall harmony. Wide tree-lined avenues connect different parts of the township, encouraging walking and cycling.</p>
+                    
+                    <div class="plan-features">
+                        <div class="plan-feature">
+                            <i class="fas fa-home"></i>
+                            <div>
+                                <h4>Residential Zones</h4>
+                                <p>Carefully planned residential clusters with optimal density and privacy</p>
+                            </div>
+                        </div>
+                        
+                        <div class="plan-feature">
+                            <i class="fas fa-leaf"></i>
+                            <div>
+                                <h4>Green Belts</h4>
+                                <p>Extensive green belts and parks occupying 70% of the township area</p>
+                            </div>
+                        </div>
+                        
+                        <div class="plan-feature">
+                            <i class="fas fa-road"></i>
+                            <div>
+                                <h4>Infrastructure</h4>
+                                <p>Wide roads with dedicated pedestrian pathways and cycling tracks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="plan-image">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80" alt="Master Plan">
+                    <div class="plan-overlay">
+                        <h3>25 Acres of Planned Excellence</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <div class="container">
+            <div class="section-header">
+                <h2>Prime Location</h2>
+                <p>Vvanta Township is strategically located on Ojhariya Bypass Road in Banswara, Rajasthan</p>
+            </div>
+            
+            <div class="location-content">
+                <div class="location-text">
+                    <h3>Connectivity & Accessibility</h3>
+                    <p>Our location offers the perfect balance between serene living and urban convenience. Situated on Ojhariya Bypass Road, Vvanta Township provides easy access to all major areas of Banswara while being away from the hustle and bustle of the city center.</p>
+                    
+                    <div class="location-details">
+                        <div class="location-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>Ojhariya Bypass Road, Banswara, Rajasthan - 327001</p>
+                            </div>
+                        </div>
+                        
+                        <div class="location-detail">
+                            <i class="fas fa-road"></i>
+                            <div>
+                                <h4>Connectivity</h4>
+                                <p>5 minutes from city center, 10 minutes from railway station, 45 minutes from airport</p>
+                            </div>
+                        </div>
+                        
+                        <div class="location-detail">
+                            <i class="fas fa-school"></i>
+                            <div>
+                                <h4>Nearby Facilities</h4>
+                                <p>Premium schools, hospitals, shopping malls, and entertainment centers nearby</p>
+                            </div>
+                        </div>
+                        
+                        <div class="location-detail">
+                            <i class="fas fa-building"></i>
+                            <div>
+                                <h4>Commercial Hubs</h4>
+                                <p>Close proximity to business districts, IT parks, and commercial centers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-map">
+                    <div class="map-placeholder">
+                        <p>Vvanta Township Location Map</p>
+                        <p>Ojhariya Bypass Road, Banswara</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 60px;">
+                <h3 style="text-align: center; margin-bottom: 40px;">Distance from Key Locations</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 30px;">
+                    <div style="text-align: center; padding: 25px; background-color: var(--light); border-radius: var(--border-radius);">
+                        <i class="fas fa-hospital" style="font-size: 2rem; color: var(--primary); margin-bottom: 15px;"></i>
+                        <h4>City Hospital</h4>
+                        <p>8 minutes drive</p>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 25px; background-color: var(--light); border-radius: var(--border-radius);">
+                        <i class="fas fa-graduation-cap" style="font-size: 2rem; color: var(--primary); margin-bottom: 15px;"></i>
+                        <h4>Schools</h4>
+                        <p>5-10 minutes drive</p>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 25px; background-color: var(--light); border-radius: var(--border-radius);">
+                        <i class="fas fa-shopping-cart" style="font-size: 2rem; color: var(--primary); margin-bottom: 15px;"></i>
+                        <h4>Shopping Mall</h4>
+                        <p>12 minutes drive</p>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 25px; background-color: var(--light); border-radius: var(--border-radius);">
+                        <i class="fas fa-train" style="font-size: 2rem; color: var(--primary); margin-bottom: 15px;"></i>
+                        <h4>Railway Station</h4>
+                        <p>10 minutes drive</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Gallery</h2>
+                <p>Take a visual tour of Vvanta Township and our luxury properties</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Township Entrance">
+                    <div class="gallery-item-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Luxury Interior">
+                    <div class="gallery-item-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80" alt="Farmhouse View">
+                    <div class="gallery-item-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Community Park">
+                    <div class="gallery-item-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Penthouse View">
+                    <div class="gallery-item-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" alt="Swimming Pool">
+                    <div class="gallery-item-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=2068&q=80" alt="Living Room">
+                    <div class="gallery-item-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2075&q=80" alt="Kitchen">
+                    <div class="gallery-item-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Bedroom">
+                    <div class="gallery-item-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1558036117-15e82a2c9a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Bathroom">
+                    <div class="gallery-item-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1549451371-64aa98a6f660?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Garden Area">
+                    <div class="gallery-item-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1592595896551-12b2d2205fa6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" alt="Clubhouse">
+                    <div class="gallery-item-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Residents Say</h2>
+                <p>Hear from our happy residents about their experience at Vivanta Township</p>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Moving to Vivanta Township was the best decision we made. The quality of construction, amenities, and community feeling is exceptional. Our children have plenty of space to play safely, and we love the green surroundings."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80" alt="Rahul Sharma">
+                        </div>
+                        <div class="author-info">
+                            <h4>Rahul Sharma</h4>
+                            <p>Resident since 2021</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; margin-top: 60px;">
+                <div class="testimonial-card" style="margin: 0;">
+                    <div class="testimonial-text">
+                        "The attention to detail in every aspect of Vvanta Township is remarkable. From the wide roads to the landscaping, everything has been thoughtfully planned. We feel safe and secure in this community."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Priya Patel">
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Patel</h4>
+                            <p>Resident since 2020</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" style="margin: 0;">
+                    <div class="testimonial-text">
+                        "As a senior citizen, I appreciate the peaceful environment and accessibility features. The medical center within the township gives me peace of mind, and the community events keep us socially engaged."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1976&q=80" alt="Mr. Gupta">
+                        </div>
+                        <div class="author-info">
+                            <h4>Mr. Gupta</h4>
+                            <p>Resident since 2019</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline" id="timeline">
+        <div class="container">
+            <div class="section-header">
+                <h2>Development Timeline</h2>
+                <p>Follow our journey from concept to completion</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2018</span>
+                        <h3>Concept & Planning</h3>
+                        <p>Initial concept development, land acquisition, and master planning. Environmental impact assessment and regulatory approvals obtained.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2019</span>
+                        <h3>Infrastructure Development</h3>
+                        <p>Development of roads, drainage, water supply, electrical infrastructure, and green spaces. Foundation work for residential blocks began.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2020</span>
+                        <h3>Construction Phase 1</h3>
+                        <p>Completion of first residential block with 50 luxury villas. Amenities like clubhouse and swimming pool construction began.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2021</span>
+                        <h3>First Residents Move In</h3>
+                        <p>First phase residents moved into their new homes. Community amenities operational. Construction of second phase began.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2022</span>
+                        <h3>Phase 2 Completion</h3>
+                        <p>Completion of farmhouses and penthouses. All major amenities including shopping complex and medical center became operational.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2023</span>
+                        <h3>Final Phase & Township Inauguration</h3>
+                        <p>Completion of final residential phase. Township officially inaugurated with 90% occupancy. Community established with active resident association.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us to schedule a site visit or enquire about our properties</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Our team is ready to assist you with any queries about Vivanta Township. Contact us today to schedule a personalized site visit.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Sales Office</h4>
+                                <p>Ojhariya Bypass Road, Banswara, Rajasthan - 327001</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone Number</h4>
+                                <p>+91 98765 43210</p>
+                                <p>+91 12345 67890</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Address</h4>
+                                <p>info@vivantatownship.com</p>
+                                <p>sales@vivantatownship.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                                <p>Sunday: 10:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 40px;">
+                        <h4>Site Visit Information</h4>
+                        <p>Site visits are available by appointment only. Our sales executives will provide a comprehensive tour of the township, available properties, and amenities. Virtual tours are also available for interested buyers who cannot visit in person.</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Enquire Now</h3>
+                    <form id="enquiryForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="property">Property Interest</label>
+                            <select id="property" class="form-control" required>
+                                <option value="">Select a property type</option>
+                                <option value="3bhk">3BHK Luxury Villa</option>
+                                <option value="farmhouse">Premium Farmhouse</option>
+                                <option value="penthouse">Luxury Penthouse</option>
+                                <option value="2bhk">2BHK Apartment</option>
+                                <option value="duplex">4BHK Duplex Villa</option>
+                                <option value="studio">Studio Apartment</option>
+                                <option value="other">Other Properties</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" class="form-control">
+                                <option value="">Select budget range</option>
+                                <option value="20-40">₹ 20-40 Lakhs</option>
+                                <option value="40-60">₹ 40-60 Lakhs</option>
+                                <option value="60-80">₹ 60-80 Lakhs</option>
+                                <option value="80-100">₹ 80 Lakhs - 1 Cr</option>
+                                <option value="100+">Above ₹ 1 Cr</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Enter your message or query" rows="4"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center;">
+                                <input type="checkbox" id="newsletter" style="margin-right: 10px;">
+                                <span>Subscribe to our newsletter for updates and offers</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%;">Submit Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">Vivanta <span>Township</span></a>
+                    <p>Vvanta Township is a premium residential development in Banswara, Rajasthan, offering luxurious living spaces designed for modern families. Experience unparalleled luxury and modern living in a sustainable community.</p>
+                    
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#developer">Developer</a></li>
+                        <li><a href="#properties">Properties</a></li>
+                        <li><a href="#amenities">Amenities</a></li>
+                        <li><a href="#plan">Master Plan</a></li>
+                        <li><a href="#location">Location</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#timeline">Timeline</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Ojhariya Bypass Road, Banswara, Rajasthan</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@vvantatownship.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 7:00 PM</p>
+                    <p><i class="fas fa-file-alt"></i> <a href="#" style="color: rgba(255, 255, 255, 0.7);">Download Brochure</a></p>
+                    <p><i class="fas fa-calendar-alt"></i> <a href="#" style="color: rgba(255, 255, 255, 0.7);">Schedule Site Visit</a></p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Vvanta Township. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: #e74c3c;"></i> for luxury living</p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">Disclaimer: Images are for representation purposes only. Actual product may vary.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="login-modal">
+            <div class="modal-header">
+                <h2>Login to Your Account</h2>
+                <button class="close-modal" id="closeLogin">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <form class="modal-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" class="form-control" placeholder="Enter your email address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" class="form-control" placeholder="Enter your password" required>
+                    </div>
+                    
+                    <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe" style="display: inline; margin-left: 5px;">Remember me</label>
+                        </div>
+                        <a href="#" style="font-size: 0.9rem;">Forgot Password?</a>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%;">Login</button>
+                </form>
+                
+                <div class="modal-footer">
+                    <p>Don't have an account? <a href="#" id="showRegister">Register here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to top button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script>
+        // Preloader
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                preloader.classList.add('hidden');
+            }, 1500);
+        });
+
+        // DOM Elements
+        const header = document.getElementById('header');
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const openLoginBtn = document.getElementById('openLogin');
+        const closeLoginBtn = document.getElementById('closeLogin');
+        const loginModal = document.getElementById('loginModal');
+        const loginForm = document.getElementById('loginForm');
+        const enquiryForm = document.getElementById('enquiryForm');
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        const navItems = document.querySelectorAll('.nav-links a');
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Show/hide scroll to top button
+            if (window.scrollY > 500) {
+                scrollToTopBtn.classList.add('active');
+            } else {
+                scrollToTopBtn.classList.remove('active');
+            }
+        });
+        
+        // Mobile navigation toggle
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Login modal functionality
+        openLoginBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeLoginBtn.addEventListener('click', () => {
+            loginModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close modal when clicking outside
+        loginModal.addEventListener('click', (e) => {
+            if (e.target === loginModal) {
+                loginModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Login form submission
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            // Simple validation
+            if (!email || !password) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // In a real application, you would send this data to a server
+            alert('Login successful! Welcome to Vvanta Township.');
+            loginModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            loginForm.reset();
+        });
+        
+        // Enquiry form submission
+        enquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const property = document.getElementById('property').value;
+            
+            if (!name || !email || !phone || !property) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            // In a real application, you would send this data to a server
+            alert('Thank you for your enquiry! Our team will contact you shortly.');
+            enquiryForm.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Scroll to top functionality
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Property card hover effects
+        const propertyCards = document.querySelectorAll('.property-card');
+        propertyCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-15px)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+        
+        // Gallery image zoom effect
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.querySelector('img').src;
+                const overlay = document.createElement('div');
+                overlay.style.position = 'fixed';
+                overlay.style.top = '0';
+                overlay.style.left = '0';
+                overlay.style.width = '100%';
+                overlay.style.height = '100%';
+                overlay.style.backgroundColor = 'rgba(0,0,0,0.9)';
+                overlay.style.zIndex = '3000';
+                overlay.style.display = 'flex';
+                overlay.style.alignItems = 'center';
+                overlay.style.justifyContent = 'center';
+                overlay.style.cursor = 'pointer';
+                
+                const img = document.createElement('img');
+                img.src = imgSrc;
+                img.style.maxWidth = '90%';
+                img.style.maxHeight = '90%';
+                img.style.borderRadius = '10px';
+                img.style.boxShadow = '0 20px 50px rgba(0,0,0,0.5)';
+                
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+                document.body.style.overflow = 'hidden';
+                
+                overlay.addEventListener('click', () => {
+                    document.body.removeChild(overlay);
+                    document.body.style.overflow = 'auto';
+                });
+            });
+        });
+        
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements to animate
+        document.querySelectorAll('.property-card, .amenity-card, .gallery-item, .feature, .stat-item, .plan-feature, .timeline-content').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Initialize the page with some animations
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add animation to hero section
+            const heroContent = document.querySelector('.hero-content');
+            heroContent.classList.add('animate__animated', 'animate__fadeIn');
+            
+            // Add animation to about section images
+            const aboutImages = document.querySelectorAll('.about-img-main, .about-img-secondary');
+            aboutImages.forEach((img, index) => {
+                img.style.animationDelay = `${index * 0.2}s`;
+                img.classList.add('animate__animated', 'animate__fadeInRight');
+            });
+            
+            // Add active class to current navigation item
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+        
+        // Testimonial slider functionality
+        let testimonialIndex = 0;
+        const testimonials = [
+            {
+                text: "Moving to Vvanta Township was the best decision we made. The quality of construction, amenities, and community feeling is exceptional. Our children have plenty of space to play safely, and we love the green surroundings.",
+                name: "Rahul Sharma",
+                role: "Resident since 2021",
+                image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80"
+            },
+            {
+                text: "The attention to detail in every aspect of Vvanta Township is remarkable. From the wide roads to the landscaping, everything has been thoughtfully planned. We feel safe and secure in this community.",
+                name: "Priya Patel",
+                role: "Resident since 2020",
+                image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            },
+            {
+                text: "As a senior citizen, I appreciate the peaceful environment and accessibility features. The medical center within the township gives me peace of mind, and the community events keep us socially engaged.",
+                name: "Mr. Gupta",
+                role: "Resident since 2019",
+                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1976&q=80"
+            }
+        ];
+        
+        function updateTestimonial() {
+            const testimonialCard = document.querySelector('.testimonial-slider .testimonial-card');
+            const currentTestimonial = testimonials[testimonialIndex];
+            
+            testimonialCard.querySelector('.testimonial-text').textContent = currentTestimonial.text;
+            testimonialCard.querySelector('.author-image img').src = currentTestimonial.image;
+            testimonialCard.querySelector('.author-info h4').textContent = currentTestimonial.name;
+            testimonialCard.querySelector('.author-info p').textContent = currentTestimonial.role;
+            
+            testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+        }
+        
+        // Change testimonial every 5 seconds
+        setInterval(updateTestimonial, 5000);
+        
+        // Newsletter subscription
+        const newsletterCheckbox = document.getElementById('newsletter');
+        if (newsletterCheckbox) {
+            newsletterCheckbox.addEventListener('change', function() {
+                if (this.checked) {
+                    // In a real application, you would store this preference
+                    console.log('User subscribed to newsletter');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
